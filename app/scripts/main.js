@@ -14,11 +14,7 @@ define([
   "jquery",
   "qdh/index"
 ], function($, index) {
-  // console.log(modernizr);
   console.log($);
-  // console.log(tpls.test());
-  // console.log(app);
-  // console.log(tts.textSearch);
   
   switch ($("html").attr("classes")){
     case "albumList" :

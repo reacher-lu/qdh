@@ -1,8 +1,8 @@
 ##Overview
 
-build in Aug 18, 2014
+Copy from dist folder
 
-Internal Use Only
+Build in Aug 18, 2014,Internal Use Only
 
 
 
