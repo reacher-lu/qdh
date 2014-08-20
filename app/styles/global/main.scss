@@ -1,16 +1,18 @@
 @charset "utf-8";
 
 //color
-$border:#c5c5c5;
+$border:#ddd;
 $bg:#f2f2f2;
 $defaultBg:#e8e8e8;
 
 $default:#444;
+$title:#777;
 $tag:#999;
-$color:#ea5862;
+$color:#65a10b;
 $remind:#ccc;
 
 $font: Tahoma,Arial,Roboto,'Droid Sans','Helvetica Neue','sumiro','Droid Sans Fallback','Heiti SC','Hiragino Sans GB', 'Microsoft Yahei',Simsun,sans-self;
+$number:Tahoma;
 
 $base_fontsize_640:24px;
 
@@ -39,9 +41,21 @@ $base_fontsize_320:$base_fontsize_640*$mul_320;
 @mixin bg($url,$w:100%,$h:$w){
   background:inline-image($url) no-repeat; background-size:$w $h;
 }
-@mixin btn($h,$radius:$h/4){
+@mixin btn($h,$radius:$h/2){
   color:#fff; 
-  background-color:$color; 
+  background-color:$tag; 
+  height:rem($h); 
+  border-radius:rem($radius); 
+  overflow:hidden;
+  background-clip: padding-box;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  line-height: rem($h);
+}
+@mixin btn3($h,$c,$radius:$h/4){
+  color:#fff; 
+  background-color:$c; 
   height:rem($h); 
   border-radius:rem($radius); 
   overflow:hidden;

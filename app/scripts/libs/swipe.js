@@ -1,4 +1,4 @@
-define(["jquery"],function($) {
+// define(["jquery"],function($) {
 /*
  * Reacher upgrade by 2014-5-28
  * Swipe 2.0  
@@ -497,6 +497,6 @@ if ( window.jQuery || window.Zepto ) {
 }
 
 
-return Swipe;
+// return Swipe;
 
-});
+// });

@@ -35,7 +35,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['<%= config.app %>/scripts/{,*/}*.js'],
-                tasks: ['jshint'],
+                // tasks: ['jshint'],
                 options: {
                     livereload: true
                 }
@@ -343,7 +343,7 @@ module.exports = function (grunt) {
             dist: [
                 'sass',
                 'copy:styles',
-                'imagemin',
+                // 'imagemin',
                 'svgmin'
             ]
         }
@@ -394,8 +394,8 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'rev',
-        'usemin',
-        'htmlmin'
+        'usemin'
+        // 'htmlmin'
     ]);
 
     grunt.registerTask('default', [
