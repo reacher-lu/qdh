@@ -31,6 +31,8 @@ git pull
 
 攻略列表页  help_guide.html
 
+交通列表页  help_trip.html
+
 
 ###玩转千岛
 
