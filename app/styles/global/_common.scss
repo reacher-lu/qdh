@@ -50,6 +50,26 @@ body{ position:relative;overflow-x:hidden;}
 .play{ @include btn(30px); background:url('../images/common/icon_play.png'); background-size:100% 100%; width:rem(30px);}
 
 
+.intro-box{ margin-bottom:rem(10px); @include hl(114px);
+  .intro-left{height:rem(90px);
+    background:#fff; text-align:center;
+    &:after{
+      border-top:rem(10px) solid transparent; border-bottom:rem(10px) solid transparent; border-left:rem(10px) solid #fff; width:0; height:0;
+      position:absolute; top:50%; content:""; margin-top:rem(-10px); left:100%;
+    }
+    img{@include wh(90px);}
+  }
+  .intro-right{height:rem(90px);
+    background:#fff; text-align:center;
+    &:before{ 
+      border-top:rem(10px) solid transparent; border-bottom:rem(10px) solid transparent; border-right:rem(10px) solid #fff; width:0; height:0;
+      position:absolute; top:50%; content:""; margin-top:rem(-10px); right:100%;
+    }
+    img{@include wh(90px);}
+  }
+  .disc{ color:#fff; text-align:center;}
+}
+
 
 
 
