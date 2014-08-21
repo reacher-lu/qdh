@@ -27,7 +27,7 @@ git pull
 
 ###出游助手
 
-千岛湖概况  overview.html
+千岛湖概况  help_overview.html
 
 攻略列表页  help_guide.html
 

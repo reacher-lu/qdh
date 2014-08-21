@@ -223,7 +223,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= config.dist %>'
             },
-            html: '<%= config.app %>/index.html'
+            html: '<%= config.app %>/*.html'
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -391,9 +391,10 @@ module.exports = function (grunt) {
         'autoprefixer',
         'concat',
         'cssmin',
+        // 'imagemin',
         'uglify',
         'copy:dist',
-        'rev',
+        // 'rev',
         'usemin'
         // 'htmlmin'
     ]);

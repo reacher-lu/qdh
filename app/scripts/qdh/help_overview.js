@@ -1,4 +1,4 @@
-var viewList = {
+var helpOverview = {
   init : function(){
     this.focus();
   },
@@ -37,4 +37,4 @@ var viewList = {
 
 };
 
-viewList.init();
+helpOverview.init();
