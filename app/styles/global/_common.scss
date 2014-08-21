@@ -71,9 +71,19 @@ body{ position:relative;overflow-x:hidden;}
 }
 
 
+// tab-switch
+.flex{
+  // display:-webkit-box;
+  // display:-moz-box;
+  // display:-ms-box;
+  // display:box;
+  // -webkit-box-orient: horizontal;
+  li{
+    // -moz-box-flex:1.0; -webkit-box-flex:1.0; -ms-box-flex:1.0; box-flex:1.0;
+  }
+}
 
 
-
-
+.aa{display:-webkit-box;}
 
 

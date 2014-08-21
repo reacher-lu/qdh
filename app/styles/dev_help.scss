@@ -31,6 +31,7 @@
   background:#79b022; color:#fff;
 }
 
+// guide
 .body-guide{ background-color:#2a292a;
   .title{ background:#01a38c; position:relative; @include hl(130px);
     .intro-left{ float:left; position:relative; padding:rem(20px) rem(55px);}
@@ -89,6 +90,8 @@
   }
 }
 
+
+// trip
 .body-trip{ padding-bottom:rem(20px);
   .title{ @include hl(80px); text-align:center; width:100%; color:#fff;
     &.go{ background-color:#8bc122;}
@@ -121,17 +124,76 @@
           i{left:rem(-15px); bottom:rem(-15px);}
         }
       }
-      .bg-box{background-color:#e4e5e6; width:100%; height:rem(120px); text-align:center; overflow:hidden;
-        display: -webkit-flex; display: flex;
-        -webkit-flex-direction: row; flex-direction: row;
-        -webkit-align-items: center; align-items: center;
-        -webkit-justify-content: center; justify-content: center;
+      .bg-box{background-color:#e4e5e6; width:100%; height:rem(120px); text-align:center; overflow:hidden;@include valign;
         img{@include wh(180px,76px);}
       }
     }
   }
 }
 
+// ticket
+.tab-box{
+  ul{
+    li{ float:left; width:50%; text-align:center; background-color:#979689; @include hl(80px);
+      &.action{ background-color:#b69c70;}
+    }
+  }
+}
+.tab-content{ position:relative; margin:0 rem(50px); padding:rem(30px) 0;
+  .content{ display:none;
+    &:first-child{ display:block;}
+  }
+  #ticketBox{ padding:rem(20px) 0 0;
+    h1{ font-size:1.4rem; padding-bottom:rem(10px); border-bottom:1px solid $border;}
+    .son-box{ margin-top:rem(50px); border-bottom:1px solid $border;
+      .h2{ padding:rem(10px) 0; vertical-align:bottom;
+        h2{font-size:1.2rem; color:$tag; display:inline-block; padding-left:rem(10px);}
+        i{ vertical-align:bottom;}
+        .ticket-price{@include icon("../images/help/help_piaojia.png",50px,40px);}
+        .open-time{@include icon("../images/help/help_time.png",40px);}
+        .youhui{@include icon("../images/help/help_menpiao.png",40px);}
+      }
+      .cont{
+        li{ padding:rem(16px) 0;
+          span{float:right; color:$tag; vertical-align:bottom;
+            i{ vertical-align:bottom;
+              &.p{ font-family:$number; font-size:1.2rem; color:$red; font-weight:bold;}
+              &.time{@include icon("../images/help/help_clock.png",22px); margin-right:rem(4px);}
+            }
+          }
+        }
+      }
+      p{ line-height:1.5; margin-top:rem(30px); color:$tag;
+        &:last-child{ padding-bottom:rem(20px);}
+      }
+    }
+  }
+  #enterBox{ margin:rem(30px) 0; position:relative;
+    ul{
+      li{ vertical-align:middle; float:left; width:50%;
+        a{display:block; @include wh(240px,60px); color:$tag; font-size:1.1rem; border-bottom:1px solid $border; margin:0 auto; padding:rem(25px) 0;}
+        i{vertical-align:middle; margin:0 rem(20px);
+          &.help_yh{@include icon("../images/help/help_yh.png",60px);}
+          &.help_qcz{@include icon("../images/help/help_qcz.png",60px);}
+          &.help_jyz{@include icon("../images/help/help_jyz.png",60px);}
+          &.help_tcc{@include icon("../images/help/help_tcc.png",60px);}
+          &.help_yd{@include icon("../images/help/help_yd.png",60px);}
+          &.help_wsj{@include icon("../images/help/help_wsj.png",60px);}
+          &.help_yj{@include icon("../images/help/help_yj.png",60px);}
+          &.help_zxd{@include icon("../images/help/help_zxd.png",60px);}
+          &.help_zxg{@include icon("../images/help/help_zxg.png",60px);}
+          &.help_kdgs{@include icon("../images/help/help_kdgs.png",60px);}
+          &.help_qcxl{@include icon("../images/help/help_qcxl.png",60px);}
+          &.help_bxgs{@include icon("../images/help/help_bxgs.png",60px);}
+          &.help_cs{@include icon("../images/help/help_cs.png",60px);}
+          &.help_tq{@include icon("../images/help/help_tq.png",60px);}
+          &.help_yy{@include icon("../images/help/help_yy.png",60px);}
+        }
+      }
+    }
+    .line{width:1px; background:$border; overflow:hidden; position:absolute; z-index:1; left:50%; top:0; height:100%; margin-left:-1px;}
+  }
+}
 
 
 

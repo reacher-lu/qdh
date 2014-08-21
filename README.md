@@ -8,12 +8,14 @@
 
 交通列表页  help_trip.html
 
+票务便民页  help_ticket.html
+
 
 ###玩转千岛
 
 景点列表页  view_list.html
 
-景点详情页  view_list.html
+景点详情页  view_detail.html
 
 
 
@@ -35,6 +37,7 @@ git init
 
 git clone https://github.com/reacher-lu/qdh.git
 
+git remote add origin https://github.com/reacher-lu/qdh.git
 
 
 ## Update

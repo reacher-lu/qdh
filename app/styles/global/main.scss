@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 //color
-$border:#ddd;
+$border:#eaeaeb;
 $bg:#f2f2f2;
 $defaultBg:#e8e8e8;
 
@@ -9,10 +9,11 @@ $default:#444;
 $title:#777;
 $tag:#999;
 $color:#65a10b;
+$red:#f30;
 $remind:#ccc;
 
 $font: Tahoma,Arial,Roboto,'Droid Sans','Helvetica Neue','sumiro','Droid Sans Fallback','Heiti SC','Hiragino Sans GB', 'Microsoft Yahei',Simsun,sans-self;
-$number:Tahoma;
+$number:"georgia";
 
 $base_fontsize_640:24px;
 
@@ -130,6 +131,19 @@ $base_fontsize_320:$base_fontsize_640*$mul_320;
   animation: $name $speed $count $way;
 }
 
+@mixin valign(){
+  display: -webkit-flex;display: -ms-flex; display: flex;
+  -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row;
+  -webkit-align-items: center; -ms-align-items: center; align-items: center;
+  -webkit-justify-content: center; -ms-justify-content: center; justify-content: center;
+}
+
+@mixin icon($bg,$w,$h:$w){
+  @include wh($w,$h);
+  display:inline-block;
+  background:url($bg);
+  background-size:100% 100%;
+}
 
 
 
