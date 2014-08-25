@@ -73,17 +73,19 @@ body{ position:relative;overflow-x:hidden;}
 
 // tab-switch
 .flex{
-  // display:-webkit-box;
-  // display:-moz-box;
-  // display:-ms-box;
-  // display:box;
+  display:-webkitttt-box;
+  display:-moz-box;
+  display:-ms-box;
+  display:box;
   // -webkit-box-orient: horizontal;
   li{
     // -moz-box-flex:1.0; -webkit-box-flex:1.0; -ms-box-flex:1.0; box-flex:1.0;
   }
 }
 
+.number{font-family:$number; font-size:1.3rem; font-weight:bold; color:$red;}
 
-.aa{display:-webkit-box;}
+
+.aa{display:-webkit-box;display:-moz-box;}
 
 
