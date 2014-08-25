@@ -112,7 +112,7 @@
 
 
 // feature
-.feature-box{ padding:rem(20px) 0; background-color:#e2e2e2;
+.feature-box{ padding:rem(20px) 0; background-color:$bg;
   .feature{
     background-color:#fff;
     .li{
@@ -144,7 +144,7 @@
     &.last-child{ padding-bottom:0;}
   }
 }
-.food-prefer{ padding:rem(30px) rem(20px); background-color:#e2e2e2;
+.food-prefer{ padding:rem(30px) rem(20px); background-color:$bg;
   h2{ line-height:2; padding-bottom:rem(6px); font-size:1.2rem;}
   .food{
     border-radius:rem(10px); background-clip:padding-box; overflow:hidden; background:#fff;
@@ -161,7 +161,59 @@
   }
 }
 
+// food-detail
+.body-food-detail{ background-color:$bg;
+  .food-msss{ font-size:1.2rem; color:#de3c00; margin:rem(30px) rem(30px) rem(10px);
+    i{@include icon('../images/enjoy/food_detail.png',24px,22px);}
+  }
+  .food-detail-box{
+    background-color:#fff; margin:0 rem(30px) rem(30px);
+    ul{ padding:rem(20px) rem(20px);
+      li{border-bottom:1px solid $border; padding:rem(16px) 0; white-space:nowrap; overflow:hidden;
+        h2{@include hl(50px); font-size:1.2rem;}
+        p{@include hl(25px); color:$tag;}
+        &:last-child{border-bottom:none;}
+      }
+    }
+  }
+}
 
+// food-package
+.body-package{ background-color:$bg;
+  .focus{
+    img{ width:100%;}
+  }
+  .desc{ background-color:#fff; padding:rem(40px) rem(40px);
+    h1{ font-size:1.3rem; padding-bottom:rem(20px);}
+    p{ position:relative; @include hl(40px);
+      .pre-order{
+        position:absolute; right:0; background-color:$orange; padding:0 rem(26px); color:#fff; border-radius:rem(10px); background-clip:padding-box; overflow:hidden;
+      }
+      .promotion{
+        i{ color:$red; font-size:1.2rem; margin-right:rem(30px); margin-left:rem(6px);}
+      }
+      .market{
+        i{ text-decoration:line-through; font-size:1.2rem; margin-left:rem(6px); color:$tag;}
+      }
+    }
+  }
+  .item{ background-color:#fff; padding:rem(40px) rem(40px) rem(20px); margin-top:rem(20px);
+    ul{
+      li{ border-bottom:1px dotted $border; padding-top:rem(20px); line-height:2.5; color:$title; font-size:1.1rem;
+        span{ float:right;}
+        &:last-child{ border-bottom:none;}
+      }
+    }
+  }
+}
+
+// food-album
+.body-album{
+  #albumFocusCtrol{ @include hl(80px); background-color:$orange; color:#fff; text-align:center; font-size:1.4rem; font-family:$number; font-weight:bold;}
+  #focusBox{
+    background-color:#000;
+  }
+}
 
 
 

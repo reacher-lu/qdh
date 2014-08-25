@@ -17,6 +17,15 @@
 
 景点详情页  view_detail.html
 
+美食概述页  enjoy_food_index.html【new】
+
+美食详情页  enjoy_food_detail.html【new】
+
+套餐详情页  enjoy_package.html【new】
+
+特色菜     enjoy_album.html【new】
+
+
 
 
 ##Overview
