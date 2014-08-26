@@ -46,9 +46,9 @@
 
 土特产详情页  enjoy_ttc_detail.html
 
-特产店详情
+特产店详情    enjoy_tcd_detail.html
 
-特产店详情-套餐
+特产店详情-套餐 enjoy_tcd_package.html
 
 
 
