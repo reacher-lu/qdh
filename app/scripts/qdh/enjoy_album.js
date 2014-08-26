@@ -1,4 +1,4 @@
-var viewDetail = {
+var enjoyAlbum = {
   init : function(){
     this.focus();
     $("#focusBox,.swipe-wrap").height($(window).height()-$("#albumFocusCtrol").height());
@@ -34,4 +34,4 @@ var viewDetail = {
 
 };
 
-viewDetail.init();
+enjoyAlbum.init();

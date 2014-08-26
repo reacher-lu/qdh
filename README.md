@@ -17,13 +17,57 @@
 
 景点详情页  view_detail.html
 
-美食概述页  enjoy_food_index.html【new】
 
-美食详情页  enjoy_food_detail.html【new】
+特色旅游列表  enjoy_trip.html
 
-套餐详情页  enjoy_package.html【new】
 
-特色菜     enjoy_album.html【new】
+美食详情页1  enjoy_food_index.html
+
+美食详情页2  enjoy_food_detail.html
+
+图集浏览     enjoy_album.html
+
+套餐详情页   enjoy_package.html
+
+特色菜详情页 
+
+农家乐       enjoy_njl_index.html
+
+农家乐详情页  enjoy_njl_detail.html
+
+
+娱乐列表页    【可借鉴美食列表】
+
+娱乐详情页1   enjoy_yule_index.html
+
+娱乐详情页2   enjoy_yule_detail.html
+
+土特产       enjoy_ttc_index.html
+
+土特产详情页  enjoy_ttc_detail.html
+
+特产店详情
+
+特产店详情-套餐
+
+
+
+
+
+
+### 用户中心
+
+用户中心     uc_index.html
+
+登录页       uc_login.html
+
+注册页       uc_reg_1.html,uc_reg_2.html,uc_reg_3.html
+
+
+
+
+
+
 
 
 

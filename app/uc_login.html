@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>用户登录</title>
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{disc}}">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="grey" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- build:css(.tmp) styles/uc.css -->
+    <link rel="stylesheet" href="styles/dev_uc.css">
+    <!-- endbuild -->
+  </head>
+  <body class="body-uc">
+    
+    <!--[if lt IE 10]>
+    <p class="browsehappy">您的浏览器版本太低，请升级或者使用chrome浏览器，否则将影响您的正常浏览</p>
+    <![endif]-->
+
+    <header id="header" class="uc-header"></header>
+
+    <form action="form_action.html" method="post">
+      <section class="uc-box">
+        <dl class="clearfix">
+          <dt class="tt">账号:</dt>
+          <dd class="cont"><input type="text" class="input" id="phone" placeholder="请输入手机/邮箱号/用户名"></dd>
+        </dl>
+        <dl class="clearfix">
+          <dt class="tt">密码:</dt>
+          <dd class="cont"><input type="password" class="input" id="password" placeholder="请输入密码"></dd>
+        </dl>
+      </section>
+
+      <input type="submit" value="登录" class="btn" id="login">
+      
+
+    </form>
+    
+    <!-- build:js({app,.tmp}) scripts/base.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/uc.js -->
+    <script src="/scripts/qdh/uc.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

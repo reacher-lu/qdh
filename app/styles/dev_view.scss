@@ -88,15 +88,22 @@
 
 // enjoy-food-index
 .body-food{background-color:#fff;}
-.food-header{background-color:#e54016; color:#fff; font-size:1.3rem; @include hl(80px); padding-left:rem(20px);}
+.food-header{background-color:#e54016; color:#fff; font-size:1.3rem; @include hl(80px); padding-left:rem(20px);
+  &.njl{background-color:#677d08;}
+  &.yl{background-color:#c22b89;}
+  &.ttc{background-color:#e37d06;}
+}
 
 .head-overview{ background-color:#fff; margin: rem(20px); border:1px solid $border; position:relative;
   .img{@include wh(200px,140px); float:left;
-    img{width:100%;}
+    img{width:100%; display:block; height:100%;}
   }
   .box{
     margin-left: rem(210px);
     .score{ @include hl(70px); border-bottom:1px solid $border;
+      &.njl i{ color:#677d08;}
+      &.yl i{ color:#c22b89;}
+      &.ttc i{ color:#e37d06;}
       .right{ float:right; color:$tag; margin-right:rem(4px);
           i{}
       }
@@ -116,8 +123,8 @@
   .feature{
     background-color:#fff;
     .li{
-      &:last-child{ border-bottom:none;}
       a.box{ color:$title;border-bottom:1px solid $border;
+        &:last-child{ border-bottom:none;}
         display: block; margin:0 rem(30px); background:url('../images/common/icon_r.png') no-repeat right center; background-size:rem(18px) rem(30px);
         @include hl(70px); vertical-align:middle;
         span{@include hl(70px); display:inline-block;}
@@ -132,7 +139,7 @@
     }
     .img{ padding:rem(20px) 0; width:rem(640px); margin:0 auto;
       li{ float:left; @include wh(170px,120px); position:relative; margin-left:rem(32px);
-        img{width:100%;}
+        img{width:100%; display:block;}
         p{ position:absolute; bottom:0; left:0; width:100%; z-index:2; text-align:center; @include hl(40px); background-color:rgba(0,0,0,.5); color:#fff;}
       }
     }
@@ -148,10 +155,10 @@
   h2{ line-height:2; padding-bottom:rem(6px); font-size:1.2rem;}
   .food{
     border-radius:rem(10px); background-clip:padding-box; overflow:hidden; background:#fff;
-    a{
+    a{ color:$default;
       display: block;margin: rem(20px); min-height:rem(50px); position:relative;
       .img{@include wh(160px,120px); border-radius:rem(8px); background-clip:padding-box; overflow:hidden; float:left;
-        img{width:100%; height:100%;}
+        img{width:100%; display:block; height:100%;}
       }
       .desc{ margin-left:rem(180px);
         p{ font-size:1.2rem;}
@@ -164,7 +171,15 @@
 // food-detail
 .body-food-detail{ background-color:$bg;
   .food-msss{ font-size:1.2rem; color:#de3c00; margin:rem(30px) rem(30px) rem(10px);
-    i{@include icon('../images/enjoy/food_detail.png',24px,22px);}
+    &.njl{
+      color: #768800;
+      i{@include icon('../images/enjoy/njl_detail.png',32px,22px); margin-left:rem(4px);}
+    }
+    &.yl{
+      color: #c22b89;
+      i{@include icon('../images/enjoy/enjoy_yule.png',27px,27px); margin-left:rem(4px);}
+    }
+    i{@include icon('../images/enjoy/food_detail.png',24px,22px); margin-left:rem(4px);}
   }
   .food-detail-box{
     background-color:#fff; margin:0 rem(30px) rem(30px);
@@ -216,7 +231,66 @@
 }
 
 
+// enjoy-trip
+.body-enjoy-trip{
+  .banner{
+    img{width:100%; display:block;}
+  }
+  .trip-box{ position:relative; height:rem(180px);
+    &.normal{
+      .title{ float:left;
+        &:after{
+          border-top:rem(10px) solid transparent; border-bottom:rem(10px) solid transparent; border-left:rem(10px) solid #fff; width:0; height:0;
+          position:absolute; top:50%; content:""; margin-top:rem(-10px); left:100%;
+        }
+      }
+      .img{margin-left:rem(170px);
+        img{width:100%; display:block;}
+      }
+      .tips-follow{right:rem(10px);}
+    }
+    &.invert{
+      .title{ float:right;
+        &:before{
+          border-top:rem(10px) solid transparent; border-bottom:rem(10px) solid transparent; border-right:rem(10px) solid #fff; width:0; height:0;
+          position:absolute; top:50%; content:""; margin-top:rem(-10px); right:100%;
+        }
+      }
+      .img{margin-right:rem(170px);
+        img{width:100%; display:block;}
+      }
+      .tips-follow{left:rem(10px);}
+    }
 
+    &.bike{ background-color:#586fb6!important;
+      .title:after{ border-left:rem(10px) solid #586fb6!important;}
+    }
+    &.hunsha{ background-color:#e34393!important;
+      .title:before{ border-right:rem(10px) solid #e34393!important;}
+    }
+    &.montain{ background-color:#63b42c!important;
+      .title:after{ border-left:rem(10px) solid #63b42c!important;}
+    }
+    &.rafting{ background-color:#3fb1eb!important;
+      .title:after{ border-left:rem(10px) solid #3fb1eb!important;}
+    }
+    &.gny{ background-color:#fbb200!important;
+      .title:after{ border-left:rem(10px) solid #fbb200!important;}
+    }
+    .title{
+      @include wh(170px,180px); position:relative; text-align:center; color:#fff; font-size:1.2rem; line-height:1.2; vertical-align:middle;
+      h2{display:inline-block;position:absolute; top:50%; margin-left:0; margin-right:0; left:0; right:0; margin-top:-1.2rem;}
+    }
+    .tips-follow{ color:#fff; position:absolute; bottom:rem(10px);
+      .follow{ margin-right:rem(30px);
+        i{@include icon("../images/enjoy/zan.png",25px); margin-right:rem(6px);}
+      }
+      .unfollow{
+        i{@include icon("../images/enjoy/zan.png",25px); @include rotate(-180deg); margin-right:rem(6px);}
+      }
+    }
+  }
+}
 
 
 
