@@ -72,7 +72,7 @@
     }
   }
   .input-box{border-radius:rem(6px); background-clip:padding-box; overflow:hidden; margin:rem(30px) 5% 0; border:1px solid #d2d2d2;
-    input{ width:90%; margin:0; padding:0; border:0; height:rem(70px); padding:0 5%;}
+    input{ width:90%; margin:0; padding:0; border:0; height:rem(70px); padding:0 5%; font-size:1.1rem;}
   }
 }
 
@@ -108,6 +108,37 @@
 #processBox{
   .remind{ margin:rem(50px) 0 0; text-align:center; color:$tag;}
 }
+
+.check-box{ background-color:#fff; padding:rem(1px) 0 rem(30px);
+  .phone-title{ margin:0 rem(30px); padding:rem(30px) 0 0;
+    .phones{ @include hl(50px);
+      i{ color:$tag;}
+    }
+    .code-btn{float:right; @include hl(50px); width:rem(130px); background-color:$blue; color:#fff; padding:0 rem(10px); cursor:pointer;}
+  }
+}
+.detail-tips{
+  padding:5% 5% 0; color:$title;
+  &.mp{ text-align:center;}
+  &.mn{ font-size:.8rem; white-space:nowrap; text-align:center;}
+}
+#textarea{width:98%; margin:0; padding:1%; border:0; height:rem(150px);}
+.prize-list{ background-color:#fff;
+  table{ margin:0 5%; width:90%;}
+  tr{
+    th,td{ border-bottom:1px solid $border; height:rem(90px); text-align:center; color:$tag;
+      &.score{color:$red;}
+      &.add{color:#75a700;}
+    }
+    th{font-size:1.2rem; color:$default;}
+  }
+}
+.blue{ height:rem(30px); width:100%; background-color:$blue;}
+
+.active-list{
+
+}
+
 
 
 @media all and (min-width:640px) {

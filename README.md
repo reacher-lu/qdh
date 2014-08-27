@@ -63,9 +63,27 @@
 
 注册页       uc_reg_1.html,uc_reg_2.html,uc_reg_3.html
 
+图片分享     uc_img_show.html
 
+验证手机号码     uc_check_phone.html
 
+详细资料     uc_detail_info.html
 
+修改资料     uc_modify_info.html
+
+找回密码     uc_find_pass.html
+
+修改密码     uc_modify_pass.html
+
+修改昵称     uc_modify_nick.html
+
+收货地址     uc_prize.html
+
+修改地址     uc_modify_address.html
+
+我的积分     uc_score.html
+
+我的活动     uc_active.html
 
 
 
