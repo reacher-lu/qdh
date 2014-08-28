@@ -65,7 +65,7 @@
 
 图片分享     uc_img_show.html
 
-验证手机号码     uc_check_phone.html
+验证手机号码  uc_check_phone.html
 
 详细资料     uc_detail_info.html
 

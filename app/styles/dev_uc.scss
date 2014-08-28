@@ -15,6 +15,10 @@
           .tt{ font-size:1.3rem;}
           p{ font-size:1rem; @include hl(45px);}
         }
+        .modify-avater{
+          margin-left: rem(110px);
+          @include hl(90px);
+        }
       }
       .right{@include icon("../images/uc/arrow_style2.png",20px,30px); position:absolute; right:0; top:50%; margin-top:rem(-15px);}
     }
@@ -36,6 +40,9 @@
           &.active{@include icon("../images/uc/uc_active.png",34px);}
           &.tousu{@include icon("../images/uc/uc_tousu.png",34px);}
           &.ask{@include icon("../images/uc/uc_ask.png",34px);}
+          &.man{@include icon("../images/uc/icon_man.png",34px);}
+          &.position{@include icon("../images/uc/icon_position.png",34px);}
+          &.phone{@include icon("../images/uc/icon_phone.png",34px);}
         }
         &:last-child{ border-bottom:none;}
         .item{ margin-left:rem(60px);
@@ -44,6 +51,10 @@
           }
           .right{
             float: right; width:50%; text-align:center; white-space:nowrap; overflow:hidden;@include hl(34px);
+          }
+          .modify{
+            display:block;background:url("../images/uc/arrow_right2.png") no-repeat right center; background-size:rem(20px) rem(30px);
+            .right{ text-align:right; width:45%; padding-right:5%; color:$blue;}
           }
         }
       }
@@ -135,9 +146,44 @@
 }
 .blue{ height:rem(30px); width:100%; background-color:$blue;}
 
-.active-list{
-
+.active-list{ padding:rem(30px);
+  .img{ float:right; @include wh(230px,140px); display:block; margin-top:rem(20px);
+    img{ width:100%;}
+  }
+  p{ color:$title; @include hl(60px);
+    .p-info{ color:$title; display:block; @include whl(150px,60px); background:url("../images/uc/arrow_right2.png") no-repeat right center; background-size:rem(20px) rem(30px);}
+  }
 }
+
+
+.body-share{ background:url(../images/uc/share_bg.png) repeat;
+  .share-head{
+    width: 100%; background-color:#828e00; box-shadow:0px 2px 2px rgba(130,140,0,.6);
+    p{ width:rem(510px); margin:0 auto; padding:rem(30px) 0; line-height:1.3; color:#fff; word-break:break-all;}
+  }
+  .share-box{ padding:0 rem(30px);
+    .share-sidebar{ width:rem(40px); float:left; position:relative; min-height:500px;
+      .list{
+        height:rem(290px); padding:0; width:100%; position:relative;
+        i{
+          @include wh(40px); display:block; font-family:$number;
+          top:50%; position:absolute; left:auto; right:auto; margin-left:auto; margin-right:auto; background-color:#8b8b8b; z-index:2;
+          border-radius:rem(25px); background-clip:padding-box; overflow:hidden; color:#fff; text-align:center; line-height:rem(40px); border:1px solid #fff;
+        }
+      }
+      .item-bg{width:1px; position:absolute; top:0; height:90%; background-color:#7e7730; left:50%; top:5%; bottom:5%; z-index:1;}
+    }
+    .share-cont{ margin-left:rem(60px); position:relative;
+      .list{
+        height:rem(230px); padding:rem(30px) 0;
+      }
+    }
+  }
+}
+
+
+
+
 
 
 
