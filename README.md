@@ -4,11 +4,27 @@
 
 千岛湖概况  help_overview.html
 
+节庆列表   help_holiday_list.html【new】
+
+节庆详情   help_holiday_detail.html【new】
+
 攻略列表页  help_guide.html
+
+攻略详情页  help_guide_detail.html【new】
 
 交通列表页  help_trip.html
 
+汽车列表页  help_car_list.html【new】
+
+汽车详情页  help_car_detail.html【new】
+
+飞机       help_airplane_detail.html【new】
+
+交通详情页  help_trip_detail.html【new】
+
 票务便民页  help_ticket.html
+
+便民详情页  help_ticket_detail.html【new】
 
 
 ###玩转千岛
@@ -63,7 +79,7 @@
 
 注册页       uc_reg_1.html,uc_reg_2.html,uc_reg_3.html
 
-图片分享     uc_img_show.html
+图片分享     uc_img_show.html【new】
 
 验证手机号码  uc_check_phone.html
 
