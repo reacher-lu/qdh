@@ -181,7 +181,18 @@
   }
 }
 
-
+// uc_prize_item
+.uc-remind{ padding:rem(100px) 0 0; text-align:center; color:$title;}
+.uc-prize-head{ position:relative;
+  a{position:absolute; top:50%; margin-top:rem(-15px);display:block; @include wh(20px,30px);}
+  .prev{
+    left:10%; background:url("../images/uc/prev.png"); background-size:100% 100%;
+  }
+  .next{
+    right:10%; background:url("../images/uc/next.png"); background-size:100% 100%;
+  }
+  p{ text-align:center; color:#fff; line-height:2.5rem;}
+}
 
 
 

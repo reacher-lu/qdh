@@ -235,7 +235,9 @@
 
 // food-album
 .body-album{
-  #albumFocusCtrol{ @include hl(80px); background-color:$orange; color:#fff; text-align:center; font-size:1.4rem; font-family:$number; font-weight:bold;}
+  #albumFocusCtrol{ @include hl(80px); background-color:$orange; color:#fff; text-align:center; font-size:1.4rem; font-family:$number; font-weight:bold;
+    &.uc{background-color:#828e00;}
+  }
   #focusBox{
     background-color:#000;
   }
@@ -351,6 +353,68 @@
     }
   }
 }
+
+
+
+// enjoy-hotel-detail
+.body-hotel{
+  .hotel-box{ border-bottom:1px solid $border; padding:rem(30px) rem(50px);
+    &.last{ border-bottom:none;}
+    h2{ @include hl(44px);
+      i{ vertical-align:top;
+        &.content{ @include hl(44px); display:inline-block; margin-left:rem(10px); font-size:1.2rem; color:$title;}
+        &.hotel-address{@include icon("../images/enjoy/hotel_address.png",44px);}
+        &.hotel-tel{@include icon("../images/enjoy/hotel_tel.png",44px);}
+        &.hotel-ss{@include icon("../images/enjoy/hotel_ss.png",44px);}
+        &.hotel-intro{@include icon("../images/enjoy/hotel_intro.png",44px);}
+      }
+    }
+    p{ color:$tag; padding-top:rem(20px); font-size:1.1rem; word-break:break-all;
+      &.intro{ text-indent:1rem; line-height:1.6;}
+    }
+    .hotel-item{ padding-top:rem(20px); @include hl(30px);
+      span{ width:32.3%; display:inline-block; color:$tag; padding-left:1%;
+        i{ vertical-align:top;
+          &.content{ @include hl(29px); display:inline-block; margin-left:rem(10px); font-size:1.2rem; color:$title;}
+          &.wifi{@include icon("../images/enjoy/hotel_wifi.png",31px,29px);}
+          &.cy{@include icon("../images/enjoy/hotel_park.png",31px,29px);}
+          &.tcc{@include icon("../images/enjoy/hotel_food.png",31px,29px);}
+        }
+      }
+    }
+  }
+}
+
+
+// enjoy_hotel_comment
+.hotel-top{
+  background-color:#2d455b; color:#fff;
+  h1{ text-align:center; border-bottom:1px solid #283848; font-size:1.2rem; padding:rem(20px) 0;}
+  .comment{
+    li{
+      .text{}
+      .process{
+        &.ws{ background-color:#009fee; border-color:#009fee;}
+        &.fw{ background-color:#4db8b3; border-color:#4db8b3;}
+        &.ss{ background-color:#e64515; border-color:#e64515;}
+        &.xjb{ background-color:#586cb4; border-color:#586cb4;}
+      }
+    }
+  }
+}
+
+.hotel-list{
+  article{
+    .date{}
+    h2{}
+    p{}
+  }
+}
+
+
+
+
+
 
 
 @media all and (min-width:640px) {

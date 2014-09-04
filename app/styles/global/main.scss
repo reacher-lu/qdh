@@ -103,10 +103,10 @@ $base_fontsize_320:$base_fontsize_640*$mul_320;
 }
 
 
-@mixin trans($speed:0.3s,$way:linear,$prototype:all){
-  -webkit-transition: $speed $way $prototype;
-  -moz-transition: $speed $way $prototype;
-  transition: $speed $way $prototype;
+@mixin trans($speed:0.3s,$way:linear,$prototype:all,$delay:0){
+  -webkit-transition: $speed $way $prototype $delay;
+  -moz-transition: $speed $way $prototype $delay;
+  transition: $speed $way $prototype $delay;
 }
 
 @mixin transform($x,$y){

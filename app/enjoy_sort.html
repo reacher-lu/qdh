@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>排序</title>
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="description" content="{{disc}}">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="grey" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- build:css(.tmp) styles/view.css -->
+    <link rel="stylesheet" href="styles/dev_view.css">
+    <!-- endbuild -->
+
+
+
+
+    <!-- 排序css -->
+    <!-- build:css(.tmp) styles/module_sort.css -->
+    <link rel="stylesheet" href="styles/module_sort.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    
+    <!--[if lt IE 10]>
+    <p class="browsehappy">您的浏览器版本太低，请升级或者使用chrome浏览器，否则将影响您的正常浏览</p>
+    <![endif]-->
+    
+
+    <!-- 排序html，在原有页面对应按钮添加data-type属性 -->
+    <a href="javascript:void(0);" data-type="search">搜索</a>
+    <a href="javascript:void(0);" data-type="sort">排序</a>
+    <!-- <a href="javascript:void(0);" data-type="hotel">附近酒店</a> -->
+    
+
+
+    
+    
+    <!-- build:js({app,.tmp}) scripts/base.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+
+    <!-- 排序js 依赖jquery -->
+    <!-- build:js({app,.tmp}) scripts/module_sort.js -->
+    <script src="/scripts/qdh/module_sort.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

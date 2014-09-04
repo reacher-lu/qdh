@@ -2,6 +2,7 @@ var enjoyAlbum = {
   init : function(){
     this.focus();
     $("#focusBox,.swipe-wrap").height($(window).height()-$("#albumFocusCtrol").height());
+    // alert(navigator.userAgent);
   },
 
   focus : function(){
@@ -13,7 +14,7 @@ var enjoyAlbum = {
     mySwipe = new Swipe(document.getElementById('focusWrap'), {
       startSlide: 0,
       speed: 400,
-      // auto: 3000,
+      // auto: 4000,
       continuous: true,
       disableScroll: false,
       stopPropagation: false,
