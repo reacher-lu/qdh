@@ -20,7 +20,7 @@
       .left{position:absolute; z-index:2; top:0; left:0;}
       .right{position:absolute; z-index:2; top:0; right:0;}
       &.p-title{
-        h2{ font-size:1.2rem;}
+        h2{ font-size:1.2rem; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
         .tag{display:inline-block;@include wh(44px,24px);background:url('../images/common/icon_youhui.png'); background-size:100% 100%;}
       }
       &.p-price{ color:$color;
@@ -258,7 +258,7 @@
         }
       }
       .img{margin-left:rem(170px);
-        img{width:100%; display:block;}
+        img{width:100%; display:block; height:rem(180px);}
       }
       .tips-follow{right:rem(10px);}
     }
