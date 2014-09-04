@@ -86,7 +86,7 @@ body{ position:relative;overflow-x:hidden;}
 
 .number{font-family:$number; font-size:1.3rem; font-weight:bold; color:$red;}
 
-.btn{ width:90%; margin:rem(30px) 5%; background-color:#8ad3f8; color:#fff; font-size:1.2rem; @include hl(70px); text-align:center; display:block; border:0; cursor:pointer;
+.btn{ width:90%; margin:rem(30px) 5%; background-color:#8ad3f8!important; border-radius:0!important; color:#fff; font-size:1.2rem; @include hl(70px); text-align:center; display:block; border:0; cursor:pointer;
   &:hover{ background-color:#009fee;}
 }
 
