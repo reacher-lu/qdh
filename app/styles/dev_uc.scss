@@ -156,6 +156,7 @@
 }
 
 
+// uc-img-show
 .body-share{ background:url(../images/uc/share_bg.png) repeat;
   .share-head{
     width: 100%; background-color:#828e00; box-shadow:0px 2px 2px rgba(130,140,0,.6);
@@ -171,11 +172,36 @@
           border-radius:rem(25px); background-clip:padding-box; overflow:hidden; color:#fff; text-align:center; line-height:rem(40px); border:1px solid #fff;
         }
       }
-      .item-bg{width:1px; position:absolute; top:0; height:90%; background-color:#7e7730; left:50%; top:5%; bottom:5%; z-index:1;}
+      .item-bg{width:1px; position:absolute; top:0; height:90%; background-color:#7e7730; left:50%; top:rem(50px); bottom:rem(50px); z-index:1;}
     }
     .share-cont{ margin-left:rem(60px); position:relative;
       .list{
-        height:rem(230px); padding:rem(30px) 0; border-bottom:1px solid $border;
+        height:rem(230px); padding:rem(30px) 0; position:relative;
+        h2{ font-size:1.2rem; color:#7e7730; line-height:2rem;}
+        .show{ position:relative;
+          .img-box{
+            .box{ @include wh(409px,184px);
+              img.cover{ display:block; width:100%; height:100%;}
+            }
+          }
+          .upload{ position:absolute; left:0; bottom:0;
+            .box{ position:relative; width:100%; height:100%; display:block; @include wh(70px,50px);
+              i{@include icon("../images/uc/share_cam.png",38px,23px); position:absolute; z-index:10; left:0; bottom:0;}
+              input{ position:absolute; z-index:20; left:0; top:0; width:100%; opacity:0;}
+            }
+          }
+          .share-link{
+            @include hl(28px); min-width:rem(10px); display:block; padding:0 rem(16px) 0 rem(36px);
+            position:absolute; right:0; bottom:0; z-index:4; color:#fff;
+            border-radius:rem(26px) 0 0 rem(26px); background-clip:padding-box; overflow:hidden;
+            background:url("../images/uc/zan.png") no-repeat rem(3px) center #828e00; background-size:rem(26px) rem(26px);
+          }
+        }
+        &:before{
+          width:0; height:0; display:block; content:"";
+          border-top:rem(10px) solid transparent; border-bottom:rem(10px) solid transparent; border-right:rem(10px) solid #000;
+          position:absolute; z-index:2; left:rem(-10px); margin-top:rem(10px); top:50%;
+        }
       }
     }
   }

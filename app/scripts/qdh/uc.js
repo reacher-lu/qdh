@@ -1,7 +1,7 @@
 var uc = {
   init : function(){
     this.submit();
-
+    this.share();
   },
 
   submit : function(){
@@ -216,6 +216,27 @@ var uc = {
       if(reg.test(value)) return true;
       else return false;
     }
+  },
+
+  share : function(){
+    if(!$("body").hasClass("body-share")) return;
+    $(".share-sidebar").height($(".share-box").height());
+
+
+    var html='',
+        l=$(".share-cont").find(".list").size();
+
+    console.log(l);
+
+
+    for(var i=0; i<l; i++)
+    {
+      html += '<div class="list"><i>'+(i+1)+'</i></div>';
+    }
+
+    console.log(html);
+
+    $(".share-sidebar").append(html);
   }
 
 
