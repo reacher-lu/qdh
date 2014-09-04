@@ -390,24 +390,40 @@
 .hotel-top{
   background-color:#2d455b; color:#fff;
   h1{ text-align:center; border-bottom:1px solid #283848; font-size:1.2rem; padding:rem(20px) 0;}
-  .comment{
-    li{
-      .text{}
-      .process{
-        &.ws{ background-color:#009fee; border-color:#009fee;}
-        &.fw{ background-color:#4db8b3; border-color:#4db8b3;}
-        &.ss{ background-color:#e64515; border-color:#e64515;}
-        &.xjb{ background-color:#586cb4; border-color:#586cb4;}
+  .comment{ padding:rem(10px) 0;
+    li{ float:left; width:50%; padding:rem(10px) 0; font-weight:normal; font-size:0; vertical-align:top;
+      span{ display:inline-block; font-size:1rem; vertical-align:top;
+        &.text{ width:rem(80px); height:rem(24px);
+          &.score{ text-align:center;}
+        }
+        &.process{ height:rem(16px); margin-top:rem(4px); width:rem(140px); border-radius:rem(8px); background-clip:padding-box; overflow:hidden; border:1px solid #333;
+          &.ws{ border-color:#009fee;
+            i{ background-color:#009fee;}
+          }
+          &.fw{ border-color:#4db8b3;
+            i{ background-color:#4db8b3;}
+          }
+          &.ss{ border-color:#e64515;
+            i{ background-color:#e64515;}
+          }
+          &.xjb{ border-color:#586cb4;
+            i{ background-color:#586cb4;}
+          }
+          i{ display:block; height:100%; width:10px;}
+        }
       }
     }
   }
 }
 
-.hotel-list{
-  article{
-    .date{}
-    h2{}
-    p{}
+.hotel-list{ padding:rem(20px) 0 0;
+  article{ border-bottom:1px solid $border; padding:rem(30px); position:relative; color:$tag;
+    .date{ top:rem(30px); right:rem(30px); position:absolute; z-index:2;}
+    h2{
+      .pj{margin-right:rem(10px); color:blue; font-size:1.2rem;}
+      .nick{margin-left:rem(10px);}
+    }
+    p{ color:#425b75; padding:rem(20px) 0 0;}
   }
 }
 
