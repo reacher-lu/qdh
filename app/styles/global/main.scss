@@ -147,6 +147,12 @@ $base_fontsize_320:$base_fontsize_640*$mul_320;
   background-size:100% 100%;
 }
 
+@mixin rap(){
+  display: block; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  overflow: hidden;
+}
 
 
 
