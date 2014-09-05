@@ -32,9 +32,9 @@
 
 ###玩转千岛
 
-酒店详情页  enjoy_hotel_detail.html【new】
+酒店详情页  enjoy_hotel_detail.html
 
-酒店点评页  enjoy_hotel_comment.html【new】
+酒店点评页  enjoy_hotel_comment.html
 
 景点列表页  view_list.html
 
@@ -42,7 +42,7 @@
 
 特色旅游列表  enjoy_trip.html
 
-排序         enjoy_sort.html【new】
+排序         enjoy_sort.html
 
 美食详情页1  enjoy_food_index.html
 
@@ -86,7 +86,7 @@
 
 注册页       uc_reg_1.html,uc_reg_2.html,uc_reg_3.html
 
-图片分享     uc_img_show.html【new】
+图片分享     uc_img_show.html
 
 验证手机号码  uc_check_phone.html
 
@@ -108,7 +108,9 @@
 
 我的活动     uc_active.html
 
-中奖名单     uc_prize_item.html【new】
+有奖活动     uc_active_list.html
+
+中奖名单     uc_prize_item.html
 
 图集浏览     uc_album.html[跟玩转千岛图集浏览一致，页面多添加了uc样式，改变头部颜色]
 
