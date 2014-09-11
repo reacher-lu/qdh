@@ -55,15 +55,55 @@ var moduleSort = {
         ');
         setTimeout(function(){$("#popbox").addClass("trans").removeClass("hide-y")},100);
         break;
-      // case "hotel":
-      //   $("#popbox").addClass("hide-y").html('');
-      //   break;
+      case "hotel":
+        $("#popbox").addClass("hide-y").html('\
+          <div class="hotel-box">\
+            <h2>我附近的酒店</h2>\
+            <input type="text" class="input-hotel">\
+            <button class="my-position"><i></i>我的位置</button>\
+            <input type="submit" class="btn submit-hotel" value="查询" id="searchHotel">\
+          </div>\
+        ');
+        setTimeout(function(){$("#popbox").addClass("trans").removeClass("hide-y")},100);
+        break;
     }
+
+    $("#popbox li").on("click.sort",function(){
+      $(this).siblings("li").removeClass("action");
+      $(this).addClass("action");
+      setTimeout(function(){
+        $("#popbg").trigger("click");
+      },500);
+    });
+
+    var self = this;
+    $("#searchHotel").on("click.search",function(){
+
+      var search = $.trim($(".input-hotel").val());
+      if(self.check.isEmpty(search))
+      {
+        alert("地址不能为空");
+        return false;
+      }
+
+      setTimeout(function(){
+        $("#popbg").trigger("click");
+      },500);
+    });
 
     // $("#popbox").css({
     //   width : $(window).width(),
     //   height : $(window).height()
     // });
+  },
+
+  check : {
+
+    isEmpty : function(value){
+      if(value === "") return true;
+      else return false;
+    }
+
   }
 
 
