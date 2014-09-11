@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* 公用 */
+.wrapper { margin: 0 auto; min-width: 280px; max-width: 640px; overflow: hidden; }
+/*slider*/
+#slider_main { overflow: hidden; position: relative; max-height: 274px; }
+.sliderWrap li { width: 100%; display: none; overflow: hidden; }
+.sliderWrap li a { display: block; width: 100%; height: 100%; }
+.sliderWrap li img { width: 100%; vertical-align: middle }
+.sliderNav { height: 10px; text-align: right; width: 100%; position: absolute; bottom: 12px; left: 0; z-index: 2; padding-right: 10px; box-sizing: border-box }
+.sliderNav a { width: 6px; height: 6px; display: inline-block; overflow: hidden; -webkit-border-radius: 4px; background: #FFF; margin: 0 2px 0 0; }
+.sliderNav a.active { background: #ccc; }
+/*酒店列表*/
+.head_img { height: 97px; width: 100%; overflow: hidden; }
+.head_img img { height: 97px; width: 100%; }
+.toolbar { height: 20px; background-color: rgba(225,225,225,0.5); float: right; margin-top: -30px; position: relative; border-radius: 5px 0 0 5px; padding:0 10px; }
+.toolbar span { width: 14px; height: 14px; background: url(img/icon_tool.png) no-repeat; background-size: 14px; float: left; margin: 3px 10px 0 10px; }
+.toolbar span.search { background-position: 0 0 }
+.toolbar span.sort { background-position: 0 -19px }
+.toolbar span.filter { background-position: 0 -38px }
+.hotel { background: #abb4dd; width: 100%; padding: 10px; box-sizing: border-box; -webkit-box-sizing: border-box; overflow: hidden }
+.list_item { height: 102px; width: 100%; background: #fff; margin-bottom: 6px; }
+.item_img { width: 137px; float: left; height: 102px; overflow: hidden; position: relative; }
+.item_img img { width: 100%; height: 100%; }
+.item_img .icon { background: url(img/icon_img.png) no-repeat; width: 15px; height: 12px; position: absolute; right: 0px; bottom: 0px; background-size: 15px; }
+.item_cont { width: 100%; padding-left: 150px; box-sizing: border-box; -webkit-box-sizing: border-box }
+.item_cont h2 { font-size: 15px; color: #444; font-weight: bold; line-height: 18px; height: 18px; padding: 6px 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.ht_info { position: relative; width: 100%; height: 70px; }
+.ht_info span { position: absolute; }
+.ht_info span.disc{ display: block; white-space: nowrap; width: 140px; text-overflow: ellipsis; overflow: hidden; font-size: 12px; line-height: 18px; color:#666;}
+.star { width: 60px; left: 14px; top: 3px; }
+.icon-star { height: 10px; background: url(img/icon_xx.png) no-repeat; float: left; background-size: 60px; }
+i.star5 { width: 60px; }
+i.star4 { width: 49px; }
+i.star3 { width: 37px; }
+i.star2 { width: 24px; }
+i.star1 { width: 11px; }
+i.star0 { width: 0; }
+.price, .wifi, .parking, .from, .diet { background-image: url(img/icon_hotel.png); background-repeat: no-repeat; background-size: 12px; }
+.score { right: 4px; color: #8e8e8f; font-size: 9px; }
+.score b { font-size: 15px; padding-right: 2px; }
+.price { left: 14px; top: 23px; color: #8e8e8f; font-size: 10px; background-position: 0 -36px; padding-left: 18px; height: 18px; line-height: 18px; }
+.price b { color: #0090e6; font-size: 15px; padding-right: 2px; }
+.wifi { left: 0px; bottom: 2px; width: 12px; height: 12px; background-position: 0 -19px; }/*wifi*/
+.parking { left: 20px; bottom: 2px; width: 12px; height: 12px; background-position: 0 1px; }/*停车场*/
+.from { right: 4px; bottom: 2px; background-position: right -56px; padding-right: 0px; font-size: 12px; color: #999; background: none;}/*距离*/
+.diet { background-position: 0 -80px; }/*餐饮*/
+/*酒店详情*/
+.hotel_name { height: 42px; background: #009fee; text-align: center }
+.hotel_name h1 { display: inline-block; font-size: 15px; color: #FFFFFF; line-height: 42px; }
+.hotel_name .star2 { display: inline-block; padding-left: 10px; }
+.star2 .icon-star { background: url(img/icon_star.png) no-repeat; background-size: 60px; }
+.custom-rate { width: 50px; height: 75px; position: relative; margin-top: -85px; float: right; background: rgba(0,0,0,0.5); color: #FFFFFF; text-align: center; border-radius: 3px 0 0 3px }
+.custom-rate span { font-size: 9px; }
+.custom-rate b { font-size: 13px; }
+.rate-percent { margin: 0 10px; border-bottom: 1px solid #ccc; height: 30px; line-height: 30px; display: block }
+.rate-count { padding-top: 7px; display: block }
+.custom-count { position: relative; float: left; margin: -20px 0 0 50px; color: #FFFFFF }
+.hotel_intr { background: #FFFFFF; border-bottom: 10px solid #abb4dd; }
+.ht_service, .ht_map { position: relative; padding: 2px 80px 2px 48px; min-height: 24px; line-height: 24px; font-size: 12px; }
+.ht_service { background: url(img/icon_fz.png) no-repeat 20px 7px; background-size: 16px; }
+.ht_map { background: url(img/icon_map.png) no-repeat 25px 6px; background-size: 11px; }
+.ht_tel span { float: right }
+.ht_ser_icon { padding: 4px 0 0; height: 18px; border-bottom: 1px solid #a9a8a8; }
+.service-icon { width: 12px; height: 12px; float: left; margin-right: 4px; }
+.intr_more { position: absolute; right: 16px; top: 2px; color: #0090e6 }
+.hotel-detail { background: #FFFFFF; width: 100%; padding: 10px 0 }
+.hotel-detail .item_cont { border-top: 1px solid #dbdcdd; border-bottom: 1px solid #dbdcdd }
+.hotel-detail .list_item { height: 93px; margin-bottom: 12px; overflow: hidden;}
+.hotel-detail .item_img { width: 130px; float: left; height: 92px; overflow: hidden; position: relative; }
+.hotel-detail .item_cont { height: 93px; padding-left: 150px; position: relative;}
+.hotel-detail .item_cont .pre-order{ 
+  position: absolute; right:5px; top: 50%; margin-top: 10px;
+  display: block; width: 60px; height: 25px; line-height: 25px; text-align:center;
+  border-radius: 5px; background-color: #009fee; color: #fff;  background-clip: padding-box;
+}
+.hotel-detail .item_cont h2 { padding-top: 20px; }
+.hotel-detail .item_cont .ht_room { color: #8e8e8f; padding-left: 24px; }
+/*概况*/
+.gkList { padding: 12px 16px; min-height: 96px }
+.gkList h3 { font-size: 16px; padding-bottom: 14px; }
+.gkList h3 span { width: 18px; height: 18px; float: right; }
+.gkList p { line-height: 20px; font-size: 12px; }
+.l_js { background: #fab000; color: #fff }
+.l_jq { background: #fff }
+.l_gl { background: #79b022; color: #fff; }
+.pictxt { position: relative }
+.pictxt span { position: absolute; top: 0px; right: 0px; }
+.pictxt p { padding-right: 100px; box-sizing: border-box; -webkit-box-sizing: border-box; }
+.l_js h3 span { background: url(img/icon_more.png) no-repeat; }
+.l_jq h3 span { background: url(img/icon_more2.png) no-repeat; }
+.l_gl h3 span { background: url(img/icon_more3.png) no-repeat; }
+.l_jq h3 { color: #db3787 }
+.l_jq p { color: #8e8e8f }
+/*美食*/
+.tablist{ border-bottom:1px solid #d5d6d7;  text-align:center; margin:16px 0;}
+.tablist span{ width:50%; display: inline-block;height:30px; line-height:30px; border-bottom:3px solid #fff;}
+.tablist span.hover{border-bottom:3px solid #e54016}
+.food .item_cont{ border-top:1px solid #ededee; border-bottom:1px solid #ededee}
+.food .score b{ color:#de3c00; font-weight:700; font-size:16px}
+.food .ht_info { position: relative; width: 100%; height: 55px; padding-top:15px; }
+
+
+
+
+
+
+
+
+
+
