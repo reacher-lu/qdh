@@ -27,6 +27,9 @@
           <div class="modify-avater">修改头像</div>
         </div>
       </a>
+      <form action="form_action.html" method="post" id="avaterForm">
+        <input type="file" name="" id="uploadAvater" class="upload">
+      </form>
     </header>
 
     <section class="item-box">
@@ -50,5 +53,23 @@
     
     <script src="scripts/base.js"></script>
     <script src="scripts/uc.js"></script>
+
+    <script type="text/javascript">
+
+      $("#uploadAvater").on("change",function(e){
+
+        var names = document.querySelector("#uploadAvater").files[0].name.split("."),
+            SUFFIX = names[names.length-1].toLowerCase();
+
+        if(!SUFFIX.match(/jpg|jpeg|png|gif|bmp/))
+        {
+          alert("上传图片的格式限制为jpg，jpeg，png，gif，bmp中的一种");
+          return false;
+        }
+
+        $("#avaterForm").submit();
+
+      });
+    </script>
   </body>
 </html>

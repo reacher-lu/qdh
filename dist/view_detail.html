@@ -77,8 +77,18 @@
           8:00AM~17:00PM
         </p>
       </div>
-      <i class="play"></i>
+      <i class="play" id="playSound">
+        <div id="audioBox" style="display:none;">
+          <audio id="audio" controls>
+            <source src="images/axdyj.mp3" type="audio/mpeg" />
+            <embed src="images/axdyj.mp3" />
+          </audio> 
+        </div>
+      </i>
     </section>
+
+
+
 
     <!-- 在线预订 -->
     <section class="view-list-box clearfix" id="online">
@@ -97,5 +107,6 @@
     
     <script src="scripts/base.js"></script>
     <script src="scripts/view_detail.js"></script>
+
   </body>
 </html>
