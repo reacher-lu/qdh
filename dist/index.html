@@ -5,6 +5,10 @@
         <title>qdh</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="grey" />
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         
@@ -14,24 +18,97 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<img src="images/common/back_top.png" alt="">
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
-
-          </ul>
-        </div>
+        uiuoiuoi
+        <!-- <img src="images/test/index_banner.png" alt="" style="display:none;"> -->
 
 
-    
 
+        <button id="weixinShare">微信分享</button>
 
     
     <script src="scripts/main.js"></script>
+
+
+
+
+    
+    <script src="scripts/libs/WeixinApi.js"></script>
+    <script>
+    WeixinApi.ready(function(Api) {
+        // 隐藏
+        Api.hideOptionMenu();
+
+        new weixin({
+            html : window.weixinShareHtml,
+            Api : Api,
+            callback : function(Api,full,unfull){
+
+                $("#weixinShareSubmit").on("click",function(){
+                        
+                    var weixinShareName = $.trim($("#weixinShareName").val()),
+                        weixinShareTel = $.trim($("#weixinShareTel").val()),
+                        reg = /^0{0,1}(13[0-9]|14[0-9]|15[0-9]||17[0-9]|18[0-9])[0-9]{8}$/;
+
+                    if(!weixinShareName)
+                    {
+                        alert("亲，请输入您的姓名~");
+                        return false;
+                    }
+                    if(!weixinShareTel)
+                    {
+                        alert("亲，请输入您的手机号~");
+                        return false;
+                    }
+                    if(!reg.test(weixinShareTel))
+                    {
+                        alert("手机号码格式错误~");
+                        return false;
+                    }
+
+                    // $.ajax({
+                    //   type : "GET",
+                    //   url : "http://seckill.taotaosou.com/queryStorageCnt.do?",
+                    //   dataType: "jsonp",
+                    //   jsonp : "jsonp",
+                    //   async   : false,
+                    //   success : function(data) {
+                        wShare(Api,full);
+                    //   },
+                    //   error : function(e) {
+                    //     console.log(e);
+                    //     // alert(e.msg);
+                    //   }
+                    // });
+
+                });
+            }
+        });
+
+        // 微信分享的数据
+        var wxData = {
+            "appId": '', 
+            "imgUrl" : 'http://img5.duitang.com/uploads/blog/201405/11/20140511145315_FQc8s.thumb.1962_0.jpeg',
+            "link" : window.location.href,
+            "desc" : "贱驴贱驴贱驴贱驴贱驴"+document.title,
+            "title" : document.title
+        };
+
+        shareCode(Api,wxData);
+
+    });
+
+    </script>
+        
+   
+
+
+
+
+
+
+
+
+
 
 
 </body>
