@@ -25,7 +25,7 @@
             <p>微信分享微信分享微信分享微信分享微信分享微信分享微信分享微信分享微信分享微信分享</p>
             <p>微信分享微信分享微信分享微信分享微信分享微信分享微信分享微信分享微信分享微信分享</p>
         </div>
-
+        <!-- <div id="shareRemind"><img src="/images/common/share_tips.png" alt=""></div> -->
 
         <button id="weixinShare">微信分享</button>
 
@@ -35,6 +35,50 @@
 
 
 
+
+
+
+
+
+    <!-- 加载中代码 start -->
+    <!-- 依赖jquery或者base.js -->
+    <section id="ajaxLoading">
+        <i></i>
+        <span>努力加载中...</span>
+    </section>
+    <script src="./scripts/libs/common.js"></script>
+    <!-- 加载中代码 end -->
+
+    
+
+
+    <!-- 刮刮乐 -->
+    <!-- 加在<div class="cover"></div>与<div class="content"></div>之间 -->
+    <!-- 下面的样式最好放在对应的样式表中，后期方便修改 http://112.124.44.99/css/activity-style.css -->
+    <style>
+        .last-remind{height:30px; font-size: 0; margin:15px 15px 0;}
+        .last-remind span{height:30px; line-height: 30px; display: inline-block; font-size: 12px; width: 50%; vertical-align: top;}
+        .last-remind .btns{ background-color: #009fee; color:#fff; font-size: 14px; text-align: center; cursor: pointer;}
+        .last-remind .last{ font-size: 14px; text-align: center; color:#fff;}
+    </style>
+    <div class="last-remind">
+        <span class="btns" onclick="javascript:window.location.reload();">再刮一次</span>
+        <span class="last">剩余刮奖次数:<i>2</i></span>
+    </div>
+    <!-- 刮刮乐 end -->
+
+
+
+
+
+
+
+
+
+    <!-- 
+<script>$("#shareRemind").height($(document).height());</script>
+
+ -->
     
     <script src="./scripts/libs/WeixinApi.js"></script>
     <script>
