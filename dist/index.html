@@ -29,8 +29,61 @@
 
         <button id="weixinShare">微信分享</button>
 
+
+
     
     <script src="scripts/main.js"></script>
+
+
+
+
+
+
+
+    <!-- 获奖弹窗  依赖jquery -->
+    <script src="scripts/prizepop.js"></script>
+    <script>
+        $("#scratchpad").wScratchPad({
+            width: 150,
+            height: 40,
+            color: "#a9a9a7",
+            scratchMove: function() {
+                num++;
+                if (num == 2) {
+                    document.getElementById('prize').innerHTML = msg;
+                }
+
+                if (zjl && num > 5 && goon) {
+                    //$("#zjl").fadeIn();
+                    goon = false;
+
+                    $("#zjl").slideToggle(500);
+                    //$("#outercont").slideUp(500)
+                    
+                    if(confirm('再刮一次?')){
+                        window.localtion.reload();
+                    }
+                }
+            },
+            // 以下为新增
+            scratchUp: function(e, percent){
+                if(percent > 60)
+                {
+                    $("#scratchpad").hide();
+                    new pop({
+                        'url' : 'http://seckill.taotaosou.com/queryStorageCnt.do',
+                        'parameter' : ["phone"]
+                    });
+                }
+            }
+        });
+    </script>
+    <!-- 获奖弹窗end-->
+
+
+
+
+
 
 
 
@@ -58,8 +111,8 @@
     <style>
         .last-remind{height:30px; font-size: 0; margin:15px 15px 0;}
         .last-remind span{height:30px; line-height: 30px; display: inline-block; font-size: 12px; width: 50%; vertical-align: top;}
-        .last-remind .btns{ background-color: #009fee; color:#fff; font-size: 14px; text-align: center; cursor: pointer;}
-        .last-remind .last{ font-size: 14px; text-align: center; color:#fff;}
+        .last-remind .btns{ background-color: #009fee; color:#fff; font-size: 14px; text-align: center; cursor: pointer; margin:0; padding:0; border:0;}
+        .last-remind .last{ font-size: 14px; text-align: center; color:#fff; margin:0; padding:0; border:0; width: 48%; white-space: nowrap;}
     </style>
     <div class="last-remind">
         <span class="btns" onclick="javascript:window.location.reload();">再刮一次</span>

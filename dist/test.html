@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>1111</title>
+  </head>
+  <body>
+   <style>
+    *{ margin:0; padding: 0; border:0;}
+    #wrapper{
+      width: 400px; height: 700px; 
+      overflow: hidden; background-color: #fff;
+    }
+    #box{
+      position: relative; 
+      height: 400px;
+      top: 100px;
+    }
+    #box li{ 
+      width: 300px; height: 40px; line-height: 40px; text-align: center; cursor: pointer;
+      background-color: #ddd; 
+      padding: 5px 10px;  
+      position: absolute; left:0; z-index: 1;
+    }
+    #box li.action{
+      background-color: #f90;
+    }
+
+
+
+   </style>
+    
+    <div id="wrapper">
+      <ul id="box">
+        <li class="action">1包包包包包包</li>
+        <li>2鞋鞋鞋鞋鞋鞋</li>
+        <li>3衣服衣服衣服</li>
+        <li>4裤子裤子裤子</li>
+        <li>5袜子袜子袜子</li>
+      </ul>
+    </div>
+
+
+    <script src="scripts/base.js"></script>
+    <script>
+      var h = $("#box li:first").height()+20;
+      var cur = $("#box li.action");
+      var l = $("#box li").size();
+      var ii = 0;
+      // 初始化
+      init();
+
+      // 点击事件
+      $("#box li").on("click",function(){
+        ii++;
+        var self=this,
+            $this = $(this);
+        cur = $("#box li.action");
+
+        if($this.hasClass("action")) return;
+
+        // 第一个消失
+        cur.show(0).delay(300).animate({
+          top : -200
+        },300,function(){
+          setTimeout(function(){
+
+            // 第一个消失后移动到最底部
+            cur.css("top",h*l).removeClass("action");
+
+            // 被点击容器移动到激活位置
+            $(self).addClass("action").animate({
+              top : "-50px"
+            },300);
+
+            // 位置交换完毕，重新排序
+            setIndex(true);
+
+            // 各容器归位
+            // if(ii == 2) return;
+              $("#box").get(0).appendChild($("#box li:first").get(0));
+
+            $("#box li").not(".action").each(function(){
+              console.log(this,h,$(this).data("index"));
+              $(this).animate({
+                top : h*$(this).data("index")
+              },300);
+            });
+            // setTimeout(function(){
+            //   console.log($("#box li:first").get(0));
+            //   $("#box").get(0).appendChild($("#box li:first").get(0));
+            // },300);
+
+          },300);
+        });
+      });
+
+      function init(){
+        $("#box li").each(function(){
+          $(this).css({
+            top:h*$(this).index()
+          });
+        });
+        cur.css({top:"-50px"});
+        setIndex();
+      }
+
+      function setIndex(flag){
+        for(var i=0; i<$("#box li").size(); i++)
+        {
+          var me = $("#box li").eq(i);
+          // console.log(me.get(0),getTop(me)/h-1);
+          var val = flag ? getTop(me)/h-1 : i; 
+          me.attr("data-index",val);
+        }
+      }
+
+      function getTop(obj){
+        return parseInt(obj.css("top")) || 0;
+      }
+
+    </script>
+  </body>
+</html>
