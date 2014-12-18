@@ -43,40 +43,40 @@
     <!-- 获奖弹窗  依赖jquery -->
     <script src="scripts/prizepop.js"></script>
     <script>
-        $("#scratchpad").wScratchPad({
-            width: 150,
-            height: 40,
-            color: "#a9a9a7",
-            scratchMove: function() {
-                num++;
-                if (num == 2) {
-                    document.getElementById('prize').innerHTML = msg;
-                }
+        // $("#scratchpad").wScratchPad({
+        //     width: 150,
+        //     height: 40,
+        //     color: "#a9a9a7",
+        //     scratchMove: function() {
+        //         num++;
+        //         if (num == 2) {
+        //             document.getElementById('prize').innerHTML = msg;
+        //         }
 
-                if (zjl && num > 5 && goon) {
-                    //$("#zjl").fadeIn();
-                    goon = false;
+        //         if (zjl && num > 5 && goon) {
+        //             //$("#zjl").fadeIn();
+        //             goon = false;
 
-                    $("#zjl").slideToggle(500);
-                    //$("#outercont").slideUp(500)
+        //             $("#zjl").slideToggle(500);
+        //             //$("#outercont").slideUp(500)
                     
-                    if(confirm('再刮一次?')){
-                        window.localtion.reload();
-                    }
-                }
-            },
-            // 以下为新增
-            scratchUp: function(e, percent){
-                if(percent > 60)
-                {
-                    $("#scratchpad").hide();
+        //             if(confirm('再刮一次?')){
+        //                 window.localtion.reload();
+        //             }
+        //         }
+        //     },
+        //     // 以下为新增
+        //     scratchUp: function(e, percent){
+        //         if(percent > 60)
+        //         {
                     new pop({
-                        'url' : 'http://seckill.taotaosou.com/queryStorageCnt.do',
-                        'parameter' : ["phone"]
+                        'url' : 'http://seckill.taotaosou.com/queryStorageCnt.do',//接口地址
+                        'parameter' : ["phone"]//接口中要传的字段的字段名
                     });
-                }
-            }
-        });
+        //         }
+        //         }
+        //     }
+        // });
     </script>
     <!-- 获奖弹窗end-->
 
