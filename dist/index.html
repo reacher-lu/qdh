@@ -30,12 +30,69 @@
         <button id="weixinShare">微信分享</button>
 
 
+        <!-- 下载APP start -->
+        <a href="" data-download>下载app</a>
+        <script>
+        (function(){
+
+          var browser = { //browser.versions.mobile
+            versions: function() {
+              var u = navigator.userAgent,
+                app = navigator.appVersion;
+              return {
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/),
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1
+              };
+            }(),
+            // 判断是否是微信内置浏览器
+            isWeixin: function() {
+              // return true;
+              var ua = navigator.userAgent.toLowerCase();
+              if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+              } else {
+                return false;
+              }
+            }
+          };
+
+          if(!browser.isWeixin()) return;
+          var download = document.querySelector('[data-download]') || null;
+          if(browser.versions.mobile && browser.versions.ios)
+          {
+            if(!!download) download.href = "https://itunes.apple.com/cn/app/id658731049?mt=8";
+            download.onclick = function(){
+              var element = document.createElement("div"),
+                  html    = document.createElement("div"),
+                  img     = document.createElement("img");
+
+              element.className = 'weixin-wrapper';
+              element.style.height = (document.body.scrollHeight>window.screen.height) ? document.body.scrollHeight : window.screen.height + 'px';
+              html.className = 'weixin-box';
+              img.src = '/images/common/ios_share.png';
+              html.appendChild(img);
+              element.appendChild(html);
+              document.querySelector("body").appendChild(element);
+              // return false;
+            }
+          }
+          else{
+            if(!!download) download.href = "http://android.myapp.com/myapp/detail.htm?apkName=qiandaohu.activity";
+          }
+        })();
+        </script>
+        <!-- 下载APP end-->
+        
+
+
+
+
+
+
 
     
     <script src="scripts/main.js"></script>
-
-
-
 
 
 
@@ -69,10 +126,10 @@
             // scratchUp: function(e, percent){
             //     if(percent > 60)
             //     {
-                    new pop({
-                        'url' : 'http://seckill.taotaosou.com/queryStorageCnt.do',//接口地址
-                        'parameter' : ["phone","name","address"]//接口中要传的字段的字段名
-                    });
+                    // new pop({
+                    //     'url' : 'http://seckill.taotaosou.com/queryStorageCnt.do',//接口地址
+                    //     'parameter' : ["phone","name","address"]//接口中要传的字段的字段名
+                    // });
             //     }
             //     }
             // }
